@@ -1,4 +1,4 @@
-/* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
 html {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: 'Cormorant Garamond', serif;
   font-size: 12px;
 }
 
