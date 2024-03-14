@@ -1,3 +1,3 @@
-# My First Web Music Player
+# Web Music Player
 
 Welcome to my first web music player project. This project aims to create a simple web-based music player with commercially free music by known artists.
