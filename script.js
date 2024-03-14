@@ -12,6 +12,7 @@ const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');    
 
 
+
 // Music
 const songs = [
     {
