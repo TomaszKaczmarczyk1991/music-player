@@ -15,41 +15,175 @@ const nextBtn = document.getElementById('next');
 // Music
 const songs = [
     {
-        name: '1-01 The Space in Between',
-        displayName: 'The Space in Between',
+        name: '01. The Space in Between',
+        displayName: '01. The Space in Between',
         artist: 'How To Destroy Angels',
+        album: 'HTDA',
+        albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
     },
     {
-        name: '02 Parasite',
-        displayName: 'Parasite',
+        name: '02. Parasite',
+        displayName: '02. Parasite',
         artist: 'How To Destroy Angels',
+        album: 'HTDA',
+        albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
     },
     {
-        name: '1-03 Fur Lined',
-        displayName: 'Fur Lined',
+        name: '03. Fur Lined',
+        displayName: '03. Fur Lined',
         artist: 'How To Destroy Angels',
+        album: 'HTDA',
+        albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
     },
     {
-        name: '1-04 BBB',
-        displayName: 'BBB',
+        name: '04. BBB',
+        displayName: '04. BBB',
         artist: 'How To Destroy Angels',
+        album: 'HTDA',
+        albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
     },
     {
-        name: '05 The Believers',
-        displayName: 'The Believers',
+        name: '05. The Believers',
+        displayName: '05. The Believers',
         artist: 'How To Destroy Angels',
+        album: 'HTDA',
+        albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
     },
     {
-        name: '1-06 A Drowning',
-        displayName: 'A Drowning',
+        name: '06. A Drowning',
+        displayName: '06. A Drowning',
         artist: 'How To Destroy Angels',
+        album: 'HTDA',
+        albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
-    }
+    },
+    {
+        name: '01. Is It Love ft. Angela McCluskey',
+        displayName: '01. Is It Love',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '02. Celebration',
+        displayName: '02. Celebration',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '03. P & P - ft. Ab Soul',
+        displayName: '03. P & P - ft. Ab Soul',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '04. She Needs Me ft. Javonte',
+        displayName: '04. She Needs Me',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '05. I am (interlude)',
+        displayName: '05. I am (interlude)',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '06. Wanna Be Heard',
+        displayName: '06. Wanna Be Heard',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '07. I Do This ft. Jay Rock',
+        displayName: '07. I Do This ft. Jay Rock',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '08. Uncle Bobby & Jason Keaton ft. Javonte',
+        displayName: '08. Uncle Bobby & Jason Keaton ft. Javonte',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '09. Faith ft. Bj The Chicago Kid & Punch',
+        displayName: '09. Faith ft. Bj The Chicago Kid & Punch',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '10. Trip',
+        displayName: '10. Trip',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '11. Vanity Slaves',
+        displayName: '11. Vanity Slaves',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '12. Far From Here ft. Schoolboy Q',
+        displayName: '12. Far From Here ft. Schoolboy Q',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '13. Thanksgiving ft. Big Pooh',
+        displayName: '13. Thanksgiving ft. Big Pooh',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '14. Let Me Be Me',
+        displayName: '14. Let Me Be Me',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    {
+        name: '15. Determined (ft. Ash Riser) BOUNS TRACK',
+        displayName: '15. Determined (ft. Ash Riser) BOUNS TRACK',
+        artist: 'Kendrick Lamar',
+        album: 'The Kendrick Lamar EP',
+        albumSrc: 'music/Kendrick Lamar EP (2009)',
+        albumCover: 'Kendrick Lamar FT',
+    },
+    
+
 ];
 
 
@@ -62,6 +196,7 @@ function playSong() {
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
     music.play();
+    console.log('debugging: playSong works properly')
 }
 
 // Pause song
@@ -79,7 +214,7 @@ playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 function loadSong(song) {
   title.textContent = song.displayName;
   artist.textContent = song.artist;
-  music.src = `music/${song.name}.mp3`;
+  music.src = `${song.albumSrc}/${song.name}.mp3`;
   image.src = `img/${song.albumCover}.jpeg`;
 }
 
@@ -89,8 +224,9 @@ let songIndex = 0;
 // Next Song
 function nextSong() {
     songIndex++;
+    console.log('debugging: nextSong() works properly');
     if (songIndex > songs.length -1) {
-        alert('This is the last song of the album.');
+        alert('This is the last song of the playlist.');
     }
     loadSong(songs[songIndex]);
     playSong();
