@@ -6,7 +6,8 @@ const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
-
+const album = document.getElementById('album');
+const muteVol = document.getElementById('mute');
 const prevBtn = document.getElementById('prev');    
 const playBtn = document.getElementById('play');    
 const nextBtn = document.getElementById('next');    
@@ -191,6 +192,9 @@ const songs = [
 // Check if playing
 let isPlaying = false;
 
+// Check if muted
+let isMuted = false;
+
 // Play song
 function playSong() {
     isPlaying = true;
@@ -243,6 +247,12 @@ function prevSong() {
     playSong();
 }
 
+// Audio Mute
+function mute(){
+    isMuted ? music.volume = 1 : music.volume = 0;
+    isMuted = !isMuted;
+}
+
 // On load - Select first song
 loadSong(songs[songIndex]);
 
@@ -289,3 +299,5 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
+album.addEventListener('click', nextSong);
+muteVol.addEventListener('click', mute);

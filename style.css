@@ -39,6 +39,7 @@ body {
 .img-container img {
   height: 100%;
   width: 100%;
+  position: relative;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 2px 30px 5px rgba(0, 0, 0, 0.5);
@@ -57,7 +58,7 @@ h3 {
   text-align: center;
   color: rgb(0, 0, 0);
   font-weight: 400;
-  margin: -10px 0 0;
+  margin: 10px 0 0;
 }
 
 /* Progress */
@@ -71,7 +72,7 @@ h3 {
 }
 
 .progress {
-  background: #f0e9e9;  
+  background: #f0e9e9 !important;  
   border-radius: 5px;
   height: 100%;
   /* change this to show progress */
@@ -114,6 +115,16 @@ h3 {
   top: 3px;
 }
 
+/* Change Album */
+.change-album{
+  position: relative;
+  font-size: 16px;
+}
+
+.album-list{
+  font-size: 32px;
+}
+
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
   .player-container {
@@ -122,6 +133,15 @@ h3 {
 
   .img-container {
     left: 29px;
+
+  }
+
+  .img-container img {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 2px 30px 5px rgba(0, 0, 0, 0.5);
   }
 
   h2 {
