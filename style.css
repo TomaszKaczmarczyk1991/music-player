@@ -89,10 +89,12 @@ h3 {
 
 /* Controls */
 .player-controls {
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   top: -15px;
-  left: 120px;
-  width: 200px;
+  left: 60px;
+  width: 500px;
 }
 
 .fas {

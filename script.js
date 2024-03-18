@@ -299,5 +299,4 @@ nextBtn.addEventListener('click', nextSong);
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
-album.addEventListener('click', nextSong);
 muteVol.addEventListener('click', mute);
