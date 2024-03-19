@@ -10,7 +10,9 @@ const album = document.getElementById('album');
 const muteVol = document.getElementById('mute');
 const prevBtn = document.getElementById('prev');    
 const playBtn = document.getElementById('play');    
-const nextBtn = document.getElementById('next');    
+const nextBtn = document.getElementById('next'); 
+const player = document.getElementById('player-container');
+const info = document.getElementById('info');
 
 
 
@@ -23,6 +25,9 @@ const songs = [
         album: 'HTDA',
         albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
+        composers: 'Trent Reznor, Atticus Ross, Rob Sheridan, Mariqueen Maandig',
+        releaseDate: 'June 1, 2010',
+        label: 'The Null Corporation',
     },
     {
         name: '02. Parasite',
@@ -31,6 +36,9 @@ const songs = [
         album: 'HTDA',
         albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
+        composers: 'Trent Reznor, Atticus Ross, Rob Sheridan, Mariqueen Maandig',
+        releaseDate: 'June 1, 2010',
+        label: 'The Null Corporation',
     },
     {
         name: '03. Fur Lined',
@@ -39,6 +47,9 @@ const songs = [
         album: 'HTDA',
         albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
+        composers: 'Trent Reznor, Atticus Ross, Rob Sheridan, Mariqueen Maandig',
+        releaseDate: 'June 1, 2010',
+        label: 'The Null Corporation',
     },
     {
         name: '04. BBB',
@@ -47,6 +58,9 @@ const songs = [
         album: 'HTDA',
         albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
+        composers: 'Trent Reznor, Atticus Ross, Rob Sheridan, Mariqueen Maandig',
+        releaseDate: 'June 1, 2010',
+        label: 'The Null Corporation',
     },
     {
         name: '05. The Believers',
@@ -55,6 +69,9 @@ const songs = [
         album: 'HTDA',
         albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
+        composers: 'Trent Reznor, Atticus Ross, Rob Sheridan, Mariqueen Maandig',
+        releaseDate: 'June 1, 2010',
+        label: 'The Null Corporation',
     },
     {
         name: '06. A Drowning',
@@ -63,6 +80,9 @@ const songs = [
         album: 'HTDA',
         albumSrc: 'music/How To Destroy Angels - HTDA EP (2010)',
         albumCover: 'htda-cover',
+        composers: 'Trent Reznor, Atticus Ross, Rob Sheridan, Mariqueen Maandig',
+        releaseDate: 'June 1, 2010',
+        label: 'The Null Corporation',
     },
     {
         name: '01. Is It Love ft. Angela McCluskey',
@@ -71,6 +91,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '02. Celebration',
@@ -79,6 +101,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '03. P & P - ft. Ab Soul',
@@ -87,6 +111,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '04. She Needs Me ft. Javonte',
@@ -95,6 +121,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '05. I am (interlude)',
@@ -103,6 +131,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '06. Wanna Be Heard',
@@ -111,6 +141,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '07. I Do This ft. Jay Rock',
@@ -119,6 +151,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '08. Uncle Bobby & Jason Keaton ft. Javonte',
@@ -127,6 +161,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '09. Faith ft. Bj The Chicago Kid & Punch',
@@ -135,6 +171,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '10. Trip',
@@ -143,6 +181,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '11. Vanity Slaves',
@@ -151,6 +191,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '12. Far From Here ft. Schoolboy Q',
@@ -159,6 +201,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '13. Thanksgiving ft. Big Pooh',
@@ -167,6 +211,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '14. Let Me Be Me',
@@ -175,6 +221,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     {
         name: '15. Determined (ft. Ash Riser) BOUNS TRACK',
@@ -183,6 +231,8 @@ const songs = [
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
         albumCover: 'Kendrick Lamar FT',
+        releaseDate: 'December 31, 2009',
+        label: 'Top Dawg Entertainment',
     },
     
 
@@ -195,13 +245,15 @@ let isPlaying = false;
 // Check if muted
 let isMuted = false;
 
+// Check if album name is displayed
+let isAlbumDisplayed = false;
+
 // Play song
 function playSong() {
     isPlaying = true;
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
     music.play();
-    console.log('debugging: playSong works properly')
 }
 
 // Pause song
@@ -229,7 +281,6 @@ let songIndex = 0;
 // Next Song
 function nextSong() {
     songIndex++;
-    console.log('debugging: nextSong() works properly');
     if (songIndex > songs.length -1) {
         alert('This is the last song of the playlist.');
     }
@@ -243,6 +294,7 @@ function prevSong() {
     if (songIndex < 0) {
         alert('There is no previous songs in the album.');
     }
+    songIndex = 0;
     loadSong(songs[songIndex]);
     playSong();
 }
@@ -251,6 +303,23 @@ function prevSong() {
 function mute(){
     isMuted ? music.volume = 1 : music.volume = 0;
     isMuted = !isMuted;
+}
+
+// Show Album
+function showAlbum() {
+    let tempTitle = songs[songIndex].name;
+    let tempArtist = songs[songIndex].artist;
+    if(!isAlbumDisplayed){
+        player.style.opacity = 0.5;
+        title.textContent = (songs[songIndex].releaseDate).toString();
+        artist.textContent = (songs[songIndex].label).toString();
+    }else {
+        player.style.opacity = 1;
+        title.textContent = tempTitle;
+        artist.textContent = tempArtist;
+        artist.style.visibility = 'visible';
+    }
+    isAlbumDisplayed = !isAlbumDisplayed;
 }
 
 // On load - Select first song
@@ -300,3 +369,4 @@ music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
 muteVol.addEventListener('click', mute);
+album.addEventListener('click', showAlbum);
