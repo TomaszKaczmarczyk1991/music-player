@@ -106,7 +106,7 @@ const songs = [
     },
     {
         name: '03. P & P - ft. Ab Soul',
-        displayName: '03. P & P - ft. Ab Soul',
+        displayName: '03. P & P',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -146,7 +146,7 @@ const songs = [
     },
     {
         name: '07. I Do This ft. Jay Rock',
-        displayName: '07. I Do This ft. Jay Rock',
+        displayName: '07. I Do This',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -156,7 +156,7 @@ const songs = [
     },
     {
         name: '08. Uncle Bobby & Jason Keaton ft. Javonte',
-        displayName: '08. Uncle Bobby & Jason Keaton ft. Javonte',
+        displayName: '08. Uncle Bobby & Jason Keaton',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -166,7 +166,7 @@ const songs = [
     },
     {
         name: '09. Faith ft. Bj The Chicago Kid & Punch',
-        displayName: '09. Faith ft. Bj The Chicago Kid & Punch',
+        displayName: '09. Faith',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -196,7 +196,7 @@ const songs = [
     },
     {
         name: '12. Far From Here ft. Schoolboy Q',
-        displayName: '12. Far From Here ft. Schoolboy Q',
+        displayName: '12. Far From Here',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -206,7 +206,7 @@ const songs = [
     },
     {
         name: '13. Thanksgiving ft. Big Pooh',
-        displayName: '13. Thanksgiving ft. Big Pooh',
+        displayName: '13. Thanksgiving',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -226,7 +226,7 @@ const songs = [
     },
     {
         name: '15. Determined (ft. Ash Riser) BOUNS TRACK',
-        displayName: '15. Determined (ft. Ash Riser) BOUNS TRACK',
+        displayName: '15. Determined',
         artist: 'Kendrick Lamar',
         album: 'The Kendrick Lamar EP',
         albumSrc: 'music/Kendrick Lamar EP (2009)',
@@ -307,7 +307,7 @@ function mute(){
 
 // Show Album
 function showAlbum() {
-    let tempTitle = songs[songIndex].name;
+    let tempTitle = songs[songIndex].displayName;
     let tempArtist = songs[songIndex].artist;
     if(!isAlbumDisplayed){
         player.style.opacity = 0.5;
