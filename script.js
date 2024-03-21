@@ -305,15 +305,46 @@ function mute(){
     isMuted = !isMuted;
 }
 
-// Show Album
-function showAlbum() {
+
+// Minimalize/Maximalize Album Cover
+function minimalizeCover(){
+    image.style.animation = 'img 0.5s ease-in-out forwards';
+}
+
+function maximalizeCover(){
+    image.style.animation = 'none';
+    image.style.height = '100%';
+    image.style.width = '100%';
+
+}
+
+// Text Move Up
+function textMoveUp() {
+    info.style.position = 'relative';
+    var currentPosition = parseInt(info.style.top) || 0;
+    info.style.top = (currentPosition - 120) + 'px';
+}
+
+// Text Move Down
+function textMoveDown() {
+    info.style.position = 'relative';
+    var currentPosition = parseInt(info.style.top) || 0;
+    info.style.top = (currentPosition + 120) + 'px';
+}
+
+// Show Album Info
+function showAlbumInfo() {
     let tempTitle = songs[songIndex].displayName;
     let tempArtist = songs[songIndex].artist;
     if(!isAlbumDisplayed){
-        player.style.opacity = 0.5;
-        title.textContent = (songs[songIndex].releaseDate).toString();
-        artist.textContent = (songs[songIndex].label).toString();
+        minimalizeCover();
+        textMoveUp();
+        player.style.opacity = 1;
+        title.textContent = `${songs[songIndex].releaseDate}`;
+        artist.innerHTML = `Composers: ${songs[songIndex].composers}<br><br>Label: ${songs[songIndex].label}`;
     }else {
+        maximalizeCover();
+        textMoveDown();
         player.style.opacity = 1;
         title.textContent = tempTitle;
         artist.textContent = tempArtist;
@@ -369,4 +400,4 @@ music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
 muteVol.addEventListener('click', mute);
-album.addEventListener('click', showAlbum);
+album.addEventListener('click', showAlbumInfo);
