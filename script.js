@@ -283,9 +283,12 @@ function nextSong() {
     songIndex++;
     if (songIndex > songs.length -1) {
         alert('This is the last song of the playlist.');
-    }
+        songIndex = songs.length -1;
+        isPlaying = false;
+    } else{
     loadSong(songs[songIndex]);
     playSong();
+    }
 }
 
 // Previous Song
@@ -293,10 +296,13 @@ function prevSong() {
     songIndex--;
     if (songIndex < 0) {
         alert('There is no previous songs in the album.');
-    }
-    songIndex = 0;
+        songIndex = 0;
+        isPlaying = false;
+    } else{
+    
     loadSong(songs[songIndex]);
     playSong();
+    }
 }
 
 // Audio Mute
@@ -402,3 +408,19 @@ music.addEventListener('timeupdate', updateProgressBar);
 progressContainer.addEventListener('click', setProgressBar);
 muteVol.addEventListener('click', mute);
 album.addEventListener('click', showAlbumInfo);
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === "ArrowRight") {
+        nextSong();
+    } else if (event.key === "ArrowLeft") {
+        prevSong();
+    } else if (event.key === " ") { // Space key
+        if (isPlaying) {
+            pauseSong();
+            isPlaying = false;
+        } else {
+            playSong();
+            isPlaying = true;
+        }
+    }
+});
